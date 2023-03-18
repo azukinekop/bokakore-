@@ -8,6 +8,8 @@
 </head>
 <body>
 	<h1>ボカコレ迄後<span id="a"></span>秒</h1>
+	<a href="javascript:twitText()">ツイートする🌟</a>
+
 	<script>
 		'use script';
 		var bokakore = new Date(2023,2,18,17,0);
@@ -20,6 +22,15 @@
 		id = setInterval(function () {
 		nya();
 		}, 1000);
+		function twitText() {
+	var s, url;
+				var a = Date.now();
+			var pyapyapya=Math.floor((bokakore-a) / 1000);
+	s = pyapyapya;
+	url = document.location.href;
+			url = "http://twitter.com/share?url=" + escape(url) + "&text=" + "ボカコレ迄後" + s+ "秒";
+			window.open(url,"_blank","width=600,height=300");
+	}
 	</script>
 </body>
 </html>
